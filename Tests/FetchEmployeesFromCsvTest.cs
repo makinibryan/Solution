@@ -5,10 +5,10 @@ namespace Tests;
 public class FetchEmployeesFromCsvTest
 {
     [Fact]
-    public async Task FetchingOfEmployeeFromCsvReturnsNewEmployee()
+    public void FetchingOfEmployeeFromCsvReturnsNewEmployee()
     {
         string csvline = "Employee1,Employee0,100";
-        var employee = FetchListOfEmployeesFromCSV.GetEmployeeDetailsFromCsvLine(csvline);
+        var employee =  FetchListOfEmployeesFromCSV.GetEmployeeDetailsFromCsvLine(csvline);
         
         Assert.Equal("Employee0", employee.ManagerId);
     }
